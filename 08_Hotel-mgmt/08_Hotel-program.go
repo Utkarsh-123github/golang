@@ -26,6 +26,17 @@ func main() {
 	fmt.Println("Total Number of Rooms:", totalRooms)
 	fmt.Println("Rooms Available:", roomsAvailable, "      Occupancy level:", occupancyLevel)
 	fmt.Printf("                          Occupancy Rate: %0.2f %%\n", occupancyRate)
+	// Note that we used Printf. This method will print a string like Println. Interestingly, you can inject variable/constant values inside a string. " Occupancy Rate: %0.2f %%\n" is called the “format specifier”. It’s a specification of the format. In this specification, we can add format verbs. A format verb is used to indicate to the printer that we want to inject in the printed output a value. The verb indicates how we want it to format the value.
+
+	// %0.2f indicate that we want to print a float value (f) and that we want to display only two decimals after the decimal separator (0.2). Note that format verbs always begin with the sign %. Here are some useful format verbs :
+
+	// %s for printing a string.
+
+	// Ex : fmt.Printf("Hotel: %s", hotelName)
+	// %d for printing an integer in base 10.
+
+	// Ex : fmt.Printf("Number of rooms: %d", totalRooms)
+	// If you want to print a percentage sign, the syntax is %%. Note also that to generate a line break added a \n at the end of our format specifier.
 	if roomsAvailable > 0 {
 		fmt.Println("Rooms:")
 		for i := 0; i < roomsAvailable; i++ {
