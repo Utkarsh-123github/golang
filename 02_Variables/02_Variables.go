@@ -10,4 +10,10 @@ func main() {
 	const num int = 20
 	// num = 30 this will give error since we cannot change constant values
 	fmt.Println(num)
+
+	// Using walrus operator
+	messageStart := "Happy birthday! You are now"
+	age := 21
+	messageEnd := "years old!"
+	fmt.Println(messageStart, age, messageEnd)
 }
